@@ -1,0 +1,39 @@
+{
+ "projectInfo": {
+  "name": "2_linkaggregation",
+  "path": "hcl_a4c7d3546314",
+  "visibility": "2",
+  "introduction": "",
+  "label": []
+ },
+ "deviceInfoList": [
+  {
+   "resourceName": "SW-1",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\SW-1.cfg"
+  },
+  {
+   "resourceName": "SW-2",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\SW-2.cfg"
+  },
+  {
+   "resourceName": "HOST1",
+   "resourceCategory": "路由器",
+   "resourceModel": "MSR36-20",
+   "resourceVersion": "CMW7.1.064-R0821P11",
+   "configPath": "DeviceConfig\\HOST1.cfg"
+  },
+  {
+   "resourceName": "HOST2",
+   "resourceCategory": "路由器",
+   "resourceModel": "MSR36-20",
+   "resourceVersion": "CMW7.1.064-R0821P11",
+   "configPath": "DeviceConfig\\HOST2.cfg"
+  }
+ ]
+}

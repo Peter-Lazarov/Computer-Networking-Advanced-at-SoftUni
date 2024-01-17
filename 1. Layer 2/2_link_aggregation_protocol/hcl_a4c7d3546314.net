@@ -1,0 +1,55 @@
+version = 5.10.1
+[vbox 127.0.0.1:16600]
+    workingdir = d:\networks\advanced\1. layer 2\hcl_a4c7d3546314\working
+    udp = 10000
+    [[S5820V2-54QS-GE SW-1]]
+        device_id = 1
+        bridge_mac = 5c-a9-46-43-01-00
+        slot0 = S5800 384
+        GE_0/1 = HOST1 GE_0/0
+        GE_0/2 = SW-2 GE_0/2
+        GE_0/3 = SW-2 GE_0/3
+        x = -217.0
+        y = -103.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW-2]]
+        device_id = 2
+        bridge_mac = 5c-a9-4d-50-02-00
+        slot0 = S5800 384
+        GE_0/2 = SW-1 GE_0/2
+        GE_0/3 = SW-1 GE_0/3
+        GE_0/1 = HOST2 GE_0/0
+        x = -16.0
+        y = -102.0
+        z = 5.0
+    [[MSR36-20 HOST1]]
+        device_id = 3
+        bridge_mac = 5c-ab-51-f0-03-00
+        slot0 = MSR36 384
+        GE_0/0 = SW-1 GE_0/1
+        x = -363.0
+        y = 28.0
+        z = 5.0
+    [[MSR36-20 HOST2]]
+        device_id = 4
+        bridge_mac = 5c-ab-56-32-04-00
+        slot0 = MSR36 384
+        GE_0/0 = SW-2 GE_0/1
+        x = 174.0
+        y = 52.0
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.6
+    m22 = 1.6
+    [[NOTE 1]]
+        text = "10.1.1.1/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = -474.0
+        y = -8.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "10.1.1.2/24"
+        font = "Arial,14,-1,5,75,0,0,0,0,0"
+        x = 238.8569460791993
+        y = 29.99931127719772
+        z = 6.0
