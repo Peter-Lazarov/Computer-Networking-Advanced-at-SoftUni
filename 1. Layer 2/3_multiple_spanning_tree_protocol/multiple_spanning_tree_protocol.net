@@ -1,0 +1,76 @@
+version = 5.10.1
+[vbox 127.0.0.1:16600]
+    workingdir = d:\networks\advanced\1. layer 2\multiple_spanning_tree_protocol\working
+    udp = 10000
+    [[S5820V2-54QS-GE SW2]]
+        device_id = 2
+        bridge_mac = 5e-7a-6f-d4-02-00
+        slot0 = S5800 384
+        GE_0/1 = SW1 GE_0/1
+        GE_0/2 = SW3 GE_0/1
+        x = -170.0
+        y = -321.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW1]]
+        device_id = 1
+        bridge_mac = 5e-7a-68-4d-01-00
+        slot0 = S5800 384
+        GE_0/1 = SW2 GE_0/1
+        GE_0/2 = SW3 GE_0/2
+        x = -505.0
+        y = -319.0
+        z = 5.0
+    [[S5820V2-54QS-GE SW3]]
+        device_id = 3
+        bridge_mac = 5e-7a-74-21-03-00
+        slot0 = S5800 384
+        GE_0/1 = SW2 GE_0/2
+        GE_0/2 = SW1 GE_0/2
+        x = -343.7058823529413
+        y = -123.41176470588235
+        z = 5.0
+[Non-vBox-DATA]
+    m11 = 1.5
+    m22 = 1.5
+    [[NOTE 1]]
+        text = "GE_0/2"
+        interface = SW3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -73.26470588235293
+        y = -8.014705882352956
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/1"
+        interface = SW3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 81.07352941176472
+        y = -12.044117647058826
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/2"
+        interface = SW1 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 12.08823529411768
+        y = 89.77941176470588
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/1"
+        interface = SW1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 66.10294117647061
+        y = -10.20588235294116
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/2"
+        interface = SW2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -8.720588235294116
+        y = 87.33823529411762
+        z = 6.0
+    [[NOTE 6]]
+        text = "GE_0/1"
+        interface = SW2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -74.33823529411765
+        y = -10.970588235294144
+        z = 6.0

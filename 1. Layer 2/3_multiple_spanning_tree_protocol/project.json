@@ -1,0 +1,32 @@
+{
+ "projectInfo": {
+  "name": "mstp",
+  "path": "multiple_spanning_tree_protocol",
+  "visibility": "2",
+  "introduction": "",
+  "label": []
+ },
+ "deviceInfoList": [
+  {
+   "resourceName": "SW2",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\SW2.cfg"
+  },
+  {
+   "resourceName": "SW1",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\SW1.cfg"
+  },
+  {
+   "resourceName": "SW3",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\SW3.cfg"
+  }
+ ]
+}
