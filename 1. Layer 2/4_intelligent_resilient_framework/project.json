@@ -1,0 +1,39 @@
+{
+ "projectInfo": {
+  "name": "4_intelligent_resilient_framework",
+  "path": "4_intelligent_resilient_framework",
+  "visibility": "2",
+  "introduction": "",
+  "label": []
+ },
+ "deviceInfoList": [
+  {
+   "resourceName": "Switch1",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\Switch1.cfg"
+  },
+  {
+   "resourceName": "Switch2",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\Switch2.cfg"
+  },
+  {
+   "resourceName": "Switch3",
+   "resourceCategory": "交换机",
+   "resourceModel": "S5820V2-54QS-GE",
+   "resourceVersion": "CMW7.1.075-A7571",
+   "configPath": "DeviceConfig\\Switch3.cfg"
+  },
+  {
+   "resourceName": "Host1",
+   "resourceCategory": "路由器",
+   "resourceModel": "MSR36-20",
+   "resourceVersion": "CMW7.1.064-R0821P11",
+   "configPath": "DeviceConfig\\Host1.cfg"
+  }
+ ]
+}

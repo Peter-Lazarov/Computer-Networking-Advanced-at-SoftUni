@@ -1,0 +1,116 @@
+version = 5.10.1
+[vbox 127.0.0.1:16600]
+    workingdir = None
+    udp = 10000
+    [[S5820V2-54QS-GE Switch1]]
+        device_id = 1
+        bridge_mac = 62-f4-68-32-01-00
+        slot0 = S5800 384
+        XGE_0/49 = Switch2 XGE_0/49
+        XGE_0/50 = Switch2 XGE_0/50
+        GE_0/1 = Switch3 GE_0/1
+        x = -346.0
+        y = -152.0
+        z = 5.0
+    [[S5820V2-54QS-GE Switch2]]
+        device_id = 2
+        bridge_mac = 62-f4-6d-8e-02-00
+        slot0 = S5800 384
+        XGE_0/49 = Switch1 XGE_0/49
+        XGE_0/50 = Switch1 XGE_0/50
+        GE_0/1 = Switch3 GE_0/2
+        GE_0/2 = Host1 GE_0/0
+        x = 85.0
+        y = -145.0
+        z = 5.0
+    [[S5820V2-54QS-GE Switch3]]
+        device_id = 3
+        bridge_mac = 64-e9-50-64-03-00
+        slot0 = S5800 384
+        GE_0/1 = Switch1 GE_0/1
+        GE_0/2 = Switch2 GE_0/1
+        x = -128.0
+        y = 151.0
+        z = 5.0
+    [[MSR36-20 Host1]]
+        device_id = 4
+        bridge_mac = 64-f7-c6-d9-04-00
+        slot0 = MSR36 384
+        GE_0/0 = Switch2 GE_0/2
+        x = 411.0
+        y = -139.0
+        z = 5.0
+[Non-vBox-DATA]
+    workdir = working
+    m11 = 1.2999999999999998
+    m22 = 1.2999999999999998
+    [[NOTE 1]]
+        text = "GE_0/0"
+        interface = Host1 GE_0/0
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -86.5
+        y = 39.5
+        z = 6.0
+    [[NOTE 2]]
+        text = "GE_0/2"
+        interface = Switch3 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 69.7837837837838
+        y = -15.0
+        z = 6.0
+    [[NOTE 3]]
+        text = "GE_0/1"
+        interface = Switch3 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -28.77887788778878
+        y = -25.0
+        z = 6.0
+    [[NOTE 4]]
+        text = "GE_0/2"
+        interface = Switch2 GE_0/2
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 71.5
+        y = 41.5
+        z = 6.0
+    [[NOTE 5]]
+        text = "GE_0/1"
+        interface = Switch2 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -27.78378378378379
+        y = 116.0
+        z = 6.0
+    [[NOTE 6]]
+        text = "XGE_0/50"
+        interface = Switch2 XGE_0/50
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -118.15597894160649
+        y = 38.24670340462862
+        z = 6.0
+    [[NOTE 7]]
+        text = "XGE_0/49"
+        interface = Switch2 XGE_0/49
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = -117.75
+        y = 13.25
+        z = 6.0
+    [[NOTE 8]]
+        text = "GE_0/1"
+        interface = Switch1 GE_0/1
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 10.77887788778878
+        y = 97.0
+        z = 6.0
+    [[NOTE 9]]
+        text = "XGE_0/50"
+        interface = Switch1 XGE_0/50
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 99.34402105839351
+        y = 59.74670340462862
+        z = 6.0
+    [[NOTE 10]]
+        text = "XGE_0/49"
+        interface = Switch1 XGE_0/49
+        font = "Arial,10,-1,5,50,0,0,0,0,0"
+        x = 99.75
+        y = -21.25
+        z = 6.0
