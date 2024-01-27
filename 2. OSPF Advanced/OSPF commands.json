@@ -1,0 +1,168 @@
+
+//1
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 82.15.15.1 255.255.255.0
+exit
+interface g0/1
+no shutdown
+ip address 10.1.1.1 255.255.255.0
+exit
+interface g0/2
+no shutdown
+ip address 10.0.1.1 255.255.255.0
+exit
+
+router ospf 1
+router-id 1.1.1.1
+network 10.0.1.0 0.0.0.255 a 0
+network 10.1.1.0 0.0.0.255 a 1
+
+
+router ospf 1
+redistribute connected subnets
+
+
+
+router ospf 1
+area 1 stub
+
+//2
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 10.0.1.2 255.255.255.0
+exit
+interface g0/1
+no shutdown
+ip address 10.0.2.2 255.255.255.0
+exit
+interface g0/2
+no shutdown
+ip address 10.2.2.2 255.255.255.0
+exit
+
+router ospf 1
+router-id 2.2.2.2
+network 10.0.1.0 0.0.0.255 a 0
+network 10.0.2.0 0.0.0.255 a 0
+network 10.2.2.0 0.0.0.255 a 2
+
+
+router ospf 1
+area 2 stub no-summary
+
+//3
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 10.0.2.3 255.255.255.0
+exit
+interface g0/1
+no shutdown
+ip address 10.3.3.3 255.255.255.0
+exit
+
+router ospf 1
+router-id 3.3.3.3
+network 10.0.2.0 0.0.0.255 a 0
+network 10.3.3.0 0.0.0.255 a 3
+
+router ospf 1
+area 3 nssa
+
+//4
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 10.1.1.4 255.255.255.0
+exit
+
+router ospf 1
+router-id 4.4.4.4
+network 10.1.1.0 0.0.0.255 a 1
+
+
+show ip route ospf
+
+
+router ospf 1
+area 1 stub
+
+//5
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 10.2.2.5 255.255.255.0
+exit
+
+router ospf 1
+router-id 5.5.5.5
+network 10.2.2.0 0.0.0.255 a 2
+
+
+router ospf 1
+area 2 stub
+
+//6
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 10.3.3.6 255.255.255.0
+exit
+configure terminal
+interface g0/1
+no shutdown
+ip address 192.168.1.6 255.255.255.0
+exit
+
+router ospf 1
+router-id 6.6.6.6
+network 10.3.3.0 0.0.0.255 a 3
+
+
+router ospf 2
+router-id 66.66.66.66
+network 192.168.1.0 0.0.0.255 a 0
+
+
+router ospf 1
+area 3 nssa
+
+
+//7
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 192.168.1.7 255.255.255.0
+exit
+interface loopback 0
+ip address 1.2.3.4 255.255.255.255
+exit
+
+
+router ospf 1
+router-id 7.7.7.7
+network 192.168.1.0 0.0.0.255 a 0
+network 1.2.3.4 0.0.0.0 a 0
+
+
+router ospf 1
+redistribute ospf 2 subnets
+
+//8
+enable
+configure terminal
+interface g0/0
+no shutdown
+ip address 82.15.15.8 255.255.255.0
+exit
+
